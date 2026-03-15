@@ -28,7 +28,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="brand_assets/images/bbq_smoker.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -1402,21 +1403,23 @@
     /* ── Scroll reveal ── */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transform: translateY(18px);
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
     }
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
     /* Stagger delay helpers */
-    .reveal-d1 { transition-delay: 0.08s; }
-    .reveal-d2 { transition-delay: 0.16s; }
-    .reveal-d3 { transition-delay: 0.24s; }
-    .reveal-d4 { transition-delay: 0.32s; }
+    .reveal-d1 { transition-delay: 0.05s; }
+    .reveal-d2 { transition-delay: 0.10s; }
+    .reveal-d3 { transition-delay: 0.15s; }
+    .reveal-d4 { transition-delay: 0.20s; }
     /* Respect reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
+      .reveal { opacity: 1; transform: none; transition: none; will-change: auto; }
     }
   </style>
 </head>
@@ -1511,7 +1514,7 @@
           </div>
           <div class="about-visual reveal reveal-d2">
             <div class="about-logo-frame">
-              <img src="brand_assets/pcs_logo_shield.png" alt="PC's Paddock shield logo — Restaurant crest" />
+              <img src="brand_assets/pcs_logo_shield.png" alt="PC's Paddock shield logo — Restaurant crest" loading="lazy" />
             </div>
             <p class="since-tag">Welcoming Diners Since 2007</p>
           </div>
@@ -1530,7 +1533,7 @@
         <!-- Staple items — always visible -->
         <div class="staple-grid">
           <div class="staple-card reveal reveal-d1">
-            <img src="brand_assets/images/chicken_wings.jpg" alt="Chicken Wings" class="staple-card-img" />
+            <img src="brand_assets/images/chicken_wings.jpg" alt="Chicken Wings" class="staple-card-img" loading="lazy" />
             <div class="staple-card-body">
               <span class="staple-card-badge">★ House Favorite</span>
               <span class="staple-card-label">Starter</span>
@@ -1539,7 +1542,7 @@
             </div>
           </div>
           <div class="staple-card reveal reveal-d2">
-            <img src="brand_assets/images/paddock_bruger.jpg" alt="Paddock Burger" class="staple-card-img" />
+            <img src="brand_assets/images/paddock_bruger.jpg" alt="Paddock Burger" class="staple-card-img" loading="lazy" />
             <div class="staple-card-body">
               <span class="staple-card-badge">★ House Favorite</span>
               <span class="staple-card-label">Light Fare</span>
@@ -1548,7 +1551,7 @@
             </div>
           </div>
           <div class="staple-card reveal reveal-d3">
-            <img src="brand_assets/images/chimichuri_steak.jpg" alt="Chimichurri NY Strip" class="staple-card-img" />
+            <img src="brand_assets/images/chimichuri_steak.jpg" alt="Chimichurri NY Strip" class="staple-card-img" loading="lazy" />
             <div class="staple-card-body">
               <span class="staple-card-label">Entrée</span>
               <div class="staple-card-name">Chimichurri NY Strip</div>
@@ -1556,7 +1559,7 @@
             </div>
           </div>
           <div class="staple-card reveal reveal-d4">
-            <img src="brand_assets/images/bourbon_street.jpg" alt="Bourbon Street" class="staple-card-img" />
+            <img src="brand_assets/images/bourbon_street.jpg" alt="Bourbon Street" class="staple-card-img" loading="lazy" />
             <div class="staple-card-body">
               <span class="staple-card-label">Entrée</span>
               <div class="staple-card-name">Bourbon Street</div>
@@ -2083,7 +2086,7 @@
         <div class="order-cards">
           <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="order-card reveal reveal-d1" aria-label="Order on Uber Eats">
             <div class="order-card-icon" aria-hidden="true">
-              <img src="brand_assets/images/uber_eats_logo.svg" alt="" style="width:38px;height:38px;object-fit:cover;border-radius:50%;" />
+              <img src="brand_assets/images/uber_eats_logo.svg" alt="" style="width:38px;height:38px;object-fit:cover;border-radius:50%;" loading="lazy" />
             </div>
             <div class="order-card-title">Uber Eats</div>
             <div class="order-card-desc">Order delivery or pickup through the Uber Eats app</div>
@@ -2091,7 +2094,7 @@
           </a>
           <a href="https://www.grubhub.com" target="_blank" rel="noopener noreferrer" class="order-card reveal reveal-d2" aria-label="Order on Grubhub">
             <div class="order-card-icon" aria-hidden="true">
-              <img src="brand_assets/images/grubhub_logo.png" alt="" style="width:38px;height:38px;object-fit:cover;border-radius:50%;" />
+              <img src="brand_assets/images/grubhub_logo.png" alt="" style="width:38px;height:38px;object-fit:cover;border-radius:50%;" loading="lazy" />
             </div>
             <div class="order-card-title">Grubhub</div>
             <div class="order-card-desc">Find us on Grubhub for delivery to your door</div>
@@ -2274,6 +2277,16 @@
       document.documentElement.style.setProperty('--transition-duration', '0ms');
     }
 
+    // ── Pause smoke when hero is off-screen ──
+    const heroSection = document.getElementById('hero');
+    const smokePuffs = document.querySelectorAll('.smoke-puff');
+    if (heroSection && smokePuffs.length) {
+      new IntersectionObserver(([entry]) => {
+        const state = entry.isIntersecting ? 'running' : 'paused';
+        smokePuffs.forEach(p => p.style.animationPlayState = state);
+      }, { threshold: 0 }).observe(heroSection);
+    }
+
     // ── Scroll reveal ──
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -2282,7 +2295,7 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.05 });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
