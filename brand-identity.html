@@ -40,7 +40,7 @@
 
     .page {
       width: 210mm;
-      min-height: 297mm;
+      height: 297mm;
       break-after: page;
       overflow: hidden;
       position: relative;
@@ -85,7 +85,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 297mm;
+      height: 297mm;
       padding-top: 22%;
       padding-bottom: 60px;
       padding-left: 40px;
@@ -161,7 +161,7 @@
     ============================================================ */
     .page-with-sidebar {
       display: flex;
-      min-height: 297mm;
+      height: 297mm;
     }
 
     .sidebar-col {
@@ -188,6 +188,9 @@
 
     .main-col {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       padding: 52px 44px 0 44px;
       position: relative;
       background: var(--off-white);
@@ -313,9 +316,10 @@
     ============================================================ */
     .logo-page-inner {
       padding: 52px 44px 40px 44px;
-      min-height: 297mm;
+      height: 297mm;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
     }
 
     .logo-display-row {
@@ -442,7 +446,10 @@
     ============================================================ */
     .palette-page-inner {
       padding: 52px 44px 40px 44px;
-      min-height: 297mm;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .swatches-grid {
@@ -553,8 +560,11 @@
     ============================================================ */
     .pairings-page {
       background: var(--green-dark);
-      min-height: 297mm;
+      height: 297mm;
       padding: 52px 44px 44px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
     }
@@ -644,7 +654,10 @@
     ============================================================ */
     .type-page-inner {
       padding: 52px 44px 40px 44px;
-      min-height: 297mm;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .type-specimens {
@@ -729,8 +742,11 @@
     ============================================================ */
     .voice-page {
       background: var(--cream);
-      min-height: 297mm;
+      height: 297mm;
       padding: 52px 44px 44px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
     }
@@ -867,7 +883,7 @@
     ============================================================ */
     .quickref-page {
       display: flex;
-      min-height: 297mm;
+      height: 297mm;
     }
 
     .quickref-left {
@@ -1082,7 +1098,7 @@
        PAGE 2 — BRAND OVERVIEW
   ============================================================ -->
   <div class="page">
-    <div class="page-with-sidebar" style="min-height:297mm;">
+    <div class="page-with-sidebar">
       <div class="sidebar-col">
         <span class="sidebar-label">Brand Overview</span>
       </div>
@@ -1354,7 +1370,7 @@
   ============================================================ -->
   <div class="page">
     <div class="pairings-page" style="position:relative;">
-      <div class="pairings-oversized">03</div>
+      <div class="pairings-oversized">04</div>
 
       <p class="pairings-eyebrow">Color Pairings</p>
       <h2 class="pairings-heading">Approved Combinations</h2>
@@ -1477,7 +1493,7 @@
   ============================================================ -->
   <div class="page">
     <div class="type-page-inner">
-      <div class="oversized-num">04</div>
+      <div class="oversized-num">05</div>
 
       <p class="section-eyebrow">Typography</p>
       <h2 class="section-heading" style="font-size:32px;">Type System</h2>
@@ -1615,7 +1631,7 @@
   ============================================================ -->
   <div class="page" style="position:relative;">
     <div class="voice-page">
-      <div class="voice-oversized">05</div>
+      <div class="voice-oversized">06</div>
 
       <p class="section-eyebrow" style="color:#2D5A3D;">Brand Voice</p>
       <h2 class="section-heading" style="font-size:32px;color:#1A3A26;">How We Sound</h2>
